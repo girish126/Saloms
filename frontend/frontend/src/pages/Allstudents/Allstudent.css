@@ -1,0 +1,48 @@
+.allstudents-root table thead {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+}
+
+.allstudents-root table thead th {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 12px !important;
+  border: none !important;
+  white-space: nowrap;
+}
+
+.allstudents-root table thead th:first-child {
+  text-align: left;
+}
+
+.allstudents-root table tbody td {
+  padding: 12px 12px;
+  vertical-align: middle;
+}
+
+.allstudents-root table tbody td.col-name div:first-child {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.allstudents-root .tag-box {
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.allstudents-root table tbody tr:hover {
+  background: #dbeafe !important;
+  transition: background 0.2s ease;
+}
+
+.allstudents-root .panel {
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}

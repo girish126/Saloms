@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(135deg, #eef2ff, #ecfeff);
+}
+
+/* ---------- Main white container ---------- */
+main > div {
+  border-radius: 18px !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ---------- Page title ---------- */
+h2 {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  transition: all 0.25s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Search inputs ---------- */
+input {
+  border-radius: 12px !important;
+  transition: all 0.25s ease;
+}
+
+input:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25) !important;
+  outline: none;
+}
+
+/* ---------- Table ---------- */
+table {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+}
+
+thead th {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+tbody tr {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #dbeafe;
+  transform: scale(1.01);
+}
+
+/* ---------- Pagination buttons ---------- */
+button {
+  border-radius: 10px !important;
+}
+
+[aria-hidden="true"] {
+  background: linear-gradient(180deg, #a7f3d0, #c7d2fe) !important;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

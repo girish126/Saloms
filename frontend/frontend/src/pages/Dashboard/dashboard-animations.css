@@ -1,0 +1,105 @@
+.min-vh-100.bg-light {
+  background: linear-gradient(135deg, #f0f7ff, #fef6ff) !important;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4) !important;
+  color: #fff !important;
+}
+
+.navbar strong {
+  color: #fff;
+}
+
+.navbar .btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card {
+  color: #fff;
+  overflow: hidden;
+}
+
+.row.mb-4 .col-md-3:nth-child(1) .card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.row.mb-4 .col-md-3:nth-child(2) .card {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.row.mb-4 .col-md-3:nth-child(3) .card {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.row.mb-4 .col-md-3:nth-child(4) .card {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.card h6 {
+  opacity: 0.9;
+}
+
+.card h3 {
+  color: #fff !important;
+}
+
+.card.mb-4 {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  color: #000;
+}
+
+.text-center > div:first-child {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.text-center:hover > div:first-child {
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.6);
+  transform: scale(1.05);
+}
+
+.table-responsive {
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.table thead {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+}
+
+.table thead th {
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.table tbody tr:hover {
+  background: #dbeafe !important;
+}
+
+[aria-hidden="true"] {
+  background: linear-gradient(180deg, #a7f3d0, #bfdbfe) !important;
+}
+
+.row.mb-4 .col-md-3:nth-child(4) .card h6,
+.row.mb-4 .col-md-3:nth-child(4) .card h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.row.mb-4 .col-md-3 .card h6,
+.row.mb-4 .col-md-3 .card h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}

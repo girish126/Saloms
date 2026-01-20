@@ -1,0 +1,67 @@
+CREATE TABLE [dbo].[tbltagLogs](
+	[SlNo] [bigint] IDENTITY(1,1) NOT NULL,
+	[tag_id] [varchar](30) NULL,
+	[DevID] [varchar](20) NULL,
+	[date] [datetime] NULL,
+ CONSTRAINT [PK_tbltagLog] PRIMARY KEY CLUSTERED 
+(
+	[SlNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ CREATE TABLE dbo.student_master (
+    STUDENT_SEQ_NBR INT IDENTITY(1,1) NOT NULL PRIMARY KEY,  -- Auto-increment ID
+    SCHOOL_CODE VARCHAR(80) NULL,
+    ZID VARCHAR(80) NULL,
+    CLASS_NAME VARCHAR(80) NULL,
+    CSACTION VARCHAR(60) NULL,
+    TAGID VARCHAR(120) NULL,
+    FULL_NAME VARCHAR(220) NULL,
+    STUDENT_REGISTRATION_NBR VARCHAR(220) NULL,
+    NO_OF_COMMUNICATION VARCHAR(50) NULL,
+    STATUS SMALLINT NOT NULL,
+    IP_ADDRESS VARCHAR(250) NULL,
+    CREATE_DATE DATETIME2(0) NULL,
+    CREATED_BY VARCHAR(120) NULL
+);
+
+
+CREATE TABLE dbo.tlb_sms_log_master (
+    SMS_SEQ_NBR  INT IDENTITY(1,1) NOT NULL,  --  auto generated
+    RESIDENCE_ID VARCHAR(80)   NULL,
+    MOBILE_NO    VARCHAR(100)  NULL,
+    SMS_TEXT     VARCHAR(MAX)  NULL,
+    API_RESPONSE VARCHAR(MAX)  NULL,
+    STATUS       SMALLINT      NOT NULL,
+    CREATE_DATE  DATETIME2(0)  DEFAULT GETDATE(),
+    CONSTRAINT PK_tlb_sms_log_master PRIMARY KEY (SMS_SEQ_NBR)
+);
+
+CREATE TABLE dbo.student_parent_details (
+    id INT IDENTITY(1,1) PRIMARY KEY,          -- Auto ID
+    studentSeqNbr INT NOT NULL,                -- FK → student_master.STUDENT_SEQ_NBR
+
+    fatherName VARCHAR(250) NULL,              -- Parent Detail 1
+    fatherEmail VARCHAR(250) NULL,             -- Parent Detail 2
+    address VARCHAR(1000) NULL,                -- Parent Detail 3
+
+    createdAt DATETIME2 DEFAULT GETDATE(),
+    updatedAt DATETIME2 DEFAULT GETDATE()
+);
+
+ALTER TABLE dbo.student_parent_details
+ADD CONSTRAINT FK_parentdetails_student
+FOREIGN KEY (studentSeqNbr)
+REFERENCES dbo.student_master(STUDENT_SEQ_NBR);
+
+
+
+
+-- ALTER TABLE dbo.student_master
+-- ADD CONSTRAINT DF_student_master_school_code
+-- DEFAULT ('shalom') FOR SCHOOL_CODE;
+
+-- ALTER TABLE dbo.student_master
+-- ADD CONSTRAINT DF_student_master_zid
+-- DEFAULT ('1') FOR ZID;
